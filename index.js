@@ -17,7 +17,7 @@ var vimeo_regex = /https?:\/\/(?:www\.|player\.)?vimeo\.com\/(?:video\/)?(\d+)(?
 /*eslint-enable max-len */
 function vimeo_parser (url) {
   var match = url.match(vimeo_regex);
-  return match && typeof match[3] === 'string' ? match[3] : url;
+  return match && typeof match[1] === 'string' ? match[1] : url;
 }
 
 var youku_regex = /https?:\/\/(?:v\.|player\.)?youku\.com\/(?:v_show\/id_|embed\/)([\w=]+)(?:$|\s|\/|\?|\.)/;
